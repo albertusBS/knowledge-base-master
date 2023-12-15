@@ -13,15 +13,4 @@ class Controller extends BaseController {
 
     use AuthorizesRequests, ValidatesRequests;
 
-    public function index() {
-
-        $units = Unit::all();
-        $posts = Post::all();
-
-        return view('home.welcome', [
-            'units' => $units,
-            'posts' => $posts
-        ]);
-    }
-
 }

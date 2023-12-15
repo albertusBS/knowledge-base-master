@@ -5,7 +5,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="shortcut icon" href="{{ url('../image/Logo.png') }}">
+        <link rel="shortcut icon" href="{{ url('/image/Logo.png') }}">
 
         <title>Knowledge Base</title>
 
@@ -13,9 +13,6 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
             integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
             crossorigin="anonymous">
-
-        {{-- <link href="https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.8.0/dist/css/fileinput.min.css"
-            rel="stylesheet"> --}}
 
         {{-- Bootstrap Icons --}}
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
@@ -103,9 +100,6 @@
             crossorigin="anonymous" defer>
         </script>
 
-        {{-- <script src="https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.8.0/dist/js/fileinput.min.js" defer></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap-fileinput@5.8.0/themes/fas/theme.min.js" defer></script> --}}
-
         {{-- Script Embedly untuk menampilkan video embed --}}
         <script>
             document.querySelectorAll( 'oembed[url]' ).forEach( element => {
@@ -131,7 +125,7 @@
             document.addEventListener('DOMContentLoaded', function() {
                 var toast = new bootstrap.Toast(document.getElementById('toast'));
                 toast.show();
-            })
+            });
         </script>
     </body>
 </html>

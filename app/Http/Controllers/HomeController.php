@@ -11,6 +11,17 @@ use Illuminate\Http\Request;
 
 class HomeController extends Controller {
 
+    public function index() {
+
+        $units = Unit::all();
+        $posts = Post::all();
+
+        return view('home.welcome', [
+            'units' => $units,
+            'posts' => $posts
+        ]);
+    }
+
     public function showPostsUnit($id) {
 
         $unit = Unit::findOrFail($id);
@@ -25,7 +36,6 @@ class HomeController extends Controller {
     public function show($unit_id, $id) {
 
         $post = Post::where('unit_id', $unit_id)->findOrFail($id);
-    //    $base64ImageData = $post->isi_post;
         $comments = Comment::where('post_id', $post->id)->get();
         $relatedPosts = Post::where('tag',  $post->tag)
             ->where('id', '!=', $post->id)->get();

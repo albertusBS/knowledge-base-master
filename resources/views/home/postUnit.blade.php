@@ -21,7 +21,7 @@
 <div class="container-fluid">
     <div class="justify-content-center row">
         @foreach ($posts as $post)
-        <div class="col mx-1">
+        <div class="col-md-2 mx-1">
             <div class="mb-4">
                 <div class="card" style="min-width: 200px;">
                     <img class="m-3 img-thumbnail"

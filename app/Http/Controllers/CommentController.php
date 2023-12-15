@@ -73,7 +73,8 @@ class CommentController extends Controller
 
         $comment->delete();
 
-        return redirect()->route('managePertanyaan')->with('success', 'Pertanyaan berhasil dihapus');
+        return redirect()->route('managePertanyaan')
+            ->with('success', 'Pertanyaan berhasil dihapus');
     }
 
     public function changeStatusTampil($id) {
@@ -85,14 +86,16 @@ class CommentController extends Controller
                 $comment->status = 0
             ]);
 
-            return redirect()->route('managePertanyaan')->with('success', 'Status pertanyaan berhasil diubah.');
+            return redirect()->route('managePertanyaan')
+                ->with('success', 'Status pertanyaan berhasil diubah.');
         }
         else {
             $comment->update([
                 $comment->status = 1
             ]);
 
-            return redirect()->route('managePertanyaan')->with('success', 'Status pertanyaan berhasil diubah');
+            return redirect()->route('managePertanyaan')
+                ->with('success', 'Status pertanyaan berhasil diubah');
         }
     }
 
